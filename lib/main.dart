@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           title: const Text(appTitle),
         ),
         body: const Center(
-          child: Text('Hello World'),
+          child: TitleSection(name:'変更'),
         ),
       ),
     );
@@ -28,5 +28,19 @@ class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
+  }
+}
+
+class TitleSection extends StatelessWidget {
+  const TitleSection({
+    super.key,
+    required this.name,
+  });
+
+  final String name;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(name);
   }
 }
